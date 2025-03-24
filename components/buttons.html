@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/global.css">
+    <link href="https://fonts.googleapis.com/css2?family=Days+One&family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- TAILWINDCSS CONFIG -->
+    <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+                    sm: "640px",
+                    md: "768px",
+                    lg: "1024px",
+                    xl: "1280px"
+                },
+                extend: {
+                    height: {
+                        navbar: "4.5rem",
+                        page: "calc(100vh - 4.5rem)",
+                        sidebarH: "calc(100vh - 4.5rem - 3rem)",
+                    },
+                    width: {
+                        sidebar: "246px",
+                        page: "calc(100vw - 246px)"
+                    },
+                    fontFamily: {
+                        primary: ['Days One', 'sans-serif'],
+                        secondary: ['Poppins', 'sans-serif'],
+                    },
+                    fontSize: {
+                        xxs: ['10px', '15px'],
+                        xs: ['12px', '18px'],
+                        sm: ['14px', '21px'],
+                        base: ['16px', '24px'],
+                        md: ['18px', '27px'],
+                        mb_lg: ['21px', '31.5px'],
+                        lg: ['24px', '36px']
+                    },
+                    colors: {
+                        accent: {
+                            DEFAULT: "#398167",
+                            active: "#3981661a",
+                            hover: "#1C5F46"
+                        },
+                        primary: {
+                            DEFAULT: '#181E1D',
+                            sub: '#666666'
+                        },
+                        secondary: {
+                            DEFAULT: '#BABABA',
+                            label: "#000000"
+                        },
+                        danger: {
+                            DEFAULT: "#FF8356",
+                            hover: "#ea580b"
+                        },
+                        background: '#F8F7F6',
+                        lightBackground: '#EDF4F1',
+                        iconBackgroundAlt: '#F9F9F9',
+
+                        border: {
+                            DEFAULT: "#F0F0F0",
+                            light: "#F9F9F9",
+                            extra_light: "#FAFAFA"
+                        }
+                    },
+                    boxShadow: {
+                        'inner-stroke': 'inset 0px 0px 0px 1px #F0F0F0',
+                    },
+                },
+            },
+        }
+    </script>
+    <title>Buttons</title>
+</head>
+<body>
+    <div class="w-fit flex flex-col gap-4 p-4">
+        <div
+            class="bg-accent cursor-pointer transition-all duration-200 rounded-full py-3 px-10 hover:bg-accent-hover active:bg-emerald-600">
+            <p class="font-secondary font-medium text-white text-center">Primary</p>
+        </div>
+
+        <div
+            class="bg-none cursor-pointer transition-all duration-200 outline outline-border rounded-full py-3 px-10 hover:bg-gray-100">
+            <p class="font-secondary font-medium text-secondary  text-base text-center">Secondary</p>
+        </div>
+
+        <div class="bg-none cursor-pointer transition-all duration-200 rounded-full  py-3 px-10 hover:bg-[#F0F0F0]">
+            <p class="font-secondary font-medium text-secondary text-base text-center">Borderless Secondary</p>
+        </div>
+
+        <div class="bg-none cursor-pointer transition-all duration-200 bg-accent-active rounded-full py-3 px-10">
+            <p class="font-secondary font-medium text-accent  text-base text-center">Active</p>
+        </div>
+
+        <div
+            class="bg-danger cursor-pointer transition-all duration-200 rounded-full py-3 px-10 hover:bg-danger-hover active:bg-orange-400">
+            <p class="font-secondary font-medium text-white text-center">Danger</p>
+        </div>
+        <div
+            class="bg-none cursor-pointer transition-all duration-200 outline outline-[#F0F0F0] rounded-full py-3 px-10 hover:outline-danger">
+            <p class="font-secondary  text-danger text-base text-center">Danger Outline</p>
+        </div>
+
+        <p>LIKED</p>
+
+        <div class="bg-none cursor-pointer transition-all duration-200 bg-accent-active rounded-full px-2 py-[6px]">
+            <div class="flex items-center justify-center gap-3">
+                <img src="../public/icons/button/like-active.svg" alt="Like Icon">
+                <p class="font-secondary font-medium text-accent text-xs">24 Likes</p>
+            </div>
+        </div>
+
+        <p>UNLIKED</p>
+        <div
+            class="bg-none cursor-pointer transition-all duration-200 outline outline-border rounded-full px-2 py-[6px] hover:bg-gray-100">
+            <div class="flex items-center justify-center gap-3">
+                <img src="../public/icons/button/like.svg" alt="Like Icon">
+                <p class="font-secondary font-medium text-secondary text-xs">24 Likes</p>
+            </div>
+        </div>
+
+        <p>Chip</p>
+
+    </div>
+
+
+
+</body>
+</html>
